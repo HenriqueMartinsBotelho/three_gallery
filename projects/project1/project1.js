@@ -24,7 +24,7 @@ camera.position.set(0, 2, 5);
 orbit.update();
 
 const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const boxMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff33 });
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
 
