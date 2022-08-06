@@ -1,6 +1,20 @@
-export default {
-  root: "src",
+import { resolve } from "path";
+import { defineConfig } from "vite";
+
+const root = resolve(__dirname, "src");
+const outDir = resolve(__dirname, "dist");
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  root,
   build: {
-    outDir: "../dist",
+    outDir,
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(root, "index.html"),
+        project1: resolve(root, "projects/project1", "project1.html"),
+      },
+    },
   },
-};
+});
